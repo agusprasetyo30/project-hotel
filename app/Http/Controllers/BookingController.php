@@ -7,6 +7,8 @@ use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+// use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 
 class BookingController extends Controller
 {
@@ -131,7 +133,7 @@ class BookingController extends Controller
             ->where('id', '=', $id)
             ->first();
 
-        $pdf = \PDF::loadView('customer.booking.print-nota-booking', [
+        $pdf = PDF::loadView('customer.booking.print-nota-booking', [
             'transaction' => $transaction,
         ])->setPaper('a5', 'potrait');
 

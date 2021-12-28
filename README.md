@@ -62,3 +62,4 @@
    9. v0.0.8
       - Menambahkan status pemesanan
       - Install library `barryvdh/laravel-dompdf`
+      - Menmabahkan print pada saat transaksi selesai pada customer
